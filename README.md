@@ -1,5 +1,5 @@
 # SUMMARY
-This analysis definitively shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are **between 101 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
+This analysis definitively shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR.  We show this by parsing the logs and account for every ticket loss. We first show that the tool functions correctly to count tickets by showing that every other round for which we have data (five other rounds) there were **zero tickets unaccounted for**. Then we show that there are **between 101 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
 
 Low tickets situations cause teams to make very different decisions and play very differently. There is no explanation for why EnR tickets are lower than can be substantiated with any data. If EnR had the tickets which cannot be accounted for, then EnR would have made different in-game decisions.
 
@@ -119,8 +119,8 @@ This file is the script which is used to process the log, summarize results, and
 These files capture the output produced by running the main script:
 - output/82_v_OWLS_-_Round_1___82team=198___owls=0.png
 - output/82_v_OWLS_-_Round_2___82team=169___owls=0.png
-- output/EnR_v_OC_-_Round_1___enr=37___oc=81.png
-- output/EnR_v_OC_-_Round_2___enr=48___oc=81.png
+- output/EnR_v_OC_-_Round_1___enr=45___oc=73.png
+- output/EnR_v_OC_-_Round_2___enr=56___oc=73.png
 - output/EnR_v_82_-_Round_1___enr=-2___82team=94.png
 - output/EnR_v_82_-_Round_2___enr=48___82team=0.png
 - output/OC_v_82_-_Round_2___oc=198___82team=0.png
@@ -135,6 +135,9 @@ These two files are the raw server logs from the EnR EU Scrim Server (EnR vs 82 
 - data/SquadGame-backup-2025.07.12-19.06.20.log
 - data/SquadGame-backup-2025.07.13-15.00.10.log
 
+This file are the raw server logs from the OC vs 82 scrim
+- data/logs 2 OC vs 82 09.07 r2.txt
+
 These data files are excerpts from the raw server logs downsampled to *only* the relevant rounds
 - data/82owls_r1.log
 - data/82owls_r2.log
@@ -142,6 +145,7 @@ These data files are excerpts from the raw server logs downsampled to *only* the
 - data/enroc_r2.log
 - data/enr82_r1.log
 - data/enr82_r2.log
+- data/oc82_r2.log
 
 
 ## Accounting for Known Limitations
