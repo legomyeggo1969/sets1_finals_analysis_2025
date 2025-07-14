@@ -12,6 +12,7 @@ class TicketType(enum.Enum):
 def main():
 
     for label, filename, ingame_match_duration in [
+            ('OC v 82 - Round 2', 'data/oc82_r2.log', 30*60 + 0),
             ('EnR v 82 - Round 1', 'data/enr82_r1.log', 41*60 + 50),
             ('EnR v 82 - Round 2', 'data/enr82_r2.log', 50*60 + 49),
             ('EnR v OC - Round 1', 'data/enroc_r1.log', 48*60 + 4),
@@ -22,6 +23,8 @@ def main():
         for excursion in [1]:
             if 'enroc' in filename:
                 team_names = ['enr', 'oc']
+            elif 'oc82' in filename:
+                team_names = ['oc', '82team']
             elif 'enr82' in filename:
                 team_names = ['enr', '82team']
             else:
@@ -35,12 +38,17 @@ def main():
                 )
             mr.add_commander_player('enr', 'Zeus Koala')
             mr.add_commander_player('oc', 'Arkantdos')
+            if 'oc82' in filename:
+                mr.add_commander_player('oc', 'Frazol')
             mr.add_commander_player('owls', 'NOOB132d')
             mr.add_commander_player('82team', 'Nukuatuk')
             
             # CAF - side 1
             # PLAGF - side 2
-            if '82owls_r1' in filename:
+            if 'oc82_r2' in filename:
+                mr.set_team_side('82team', 1)
+                mr.set_team_side('oc', 2)
+            elif '82owls_r1' in filename:
                 mr.set_team_side('owls', 1)
                 mr.set_team_side('82team', 2)
             elif '82owls_r2' in filename:
@@ -71,13 +79,23 @@ def main():
             print('*'*80)
             slr.search_tick_group(filename)
 
-            if 'enr82_r1' in filename:
+            if 'oc82_r2' in filename:
+                mr.delta_ticket_count_ingame('59:00',          '82team', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('56:00',          'oc', 30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('55:00',          '82team',  30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('52:00',          'oc',  30, TicketType.Cap) # finish radio cap - approximate based on timeline graphic
+                mr.add_ticket_bleed_ingame(  '52:00', '00:00', '82team', -1) # mid cap bleed
+                mr.delta_ticket_count_ingame('46:00',          '82team', -20, TicketType.RadioLoss) # Radio loss - approximiate based on timeline graphic
+                #mr.delta_ticket_count_ingame('22:10',          'enr', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('36:00',          '82team', -20, TicketType.RadioLoss) # Radio loss - approximiate based on timeline graphic
+
+            elif 'enr82_r1' in filename:
                 mr.delta_ticket_count_ingame('55:00',          'enr', 30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
                 mr.delta_ticket_count_ingame('54:00',          '82team',  30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
                 mr.delta_ticket_count_ingame('51:30',          '82team',  30, TicketType.Cap) # finish radio cap - approximate based on timeline graphic
                 mr.add_ticket_bleed_ingame(  '51:30', '00:00', 'enr', -1) # mid cap bleed
                 mr.delta_ticket_count_ingame('44:00',          'enr', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
-                mr.delta_ticket_count_ingame('30:00',          'enr', -20, TicketType.RadioLoss) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('30:00',          'enr', -20, TicketType.RadioLoss) # Radio loss - approximiate based on timeline graphic
                 mr.delta_ticket_count_ingame('22:10',          'enr', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
             elif 'enr82_r2' in filename:
                 mr.delta_ticket_count_ingame('54:00',          '82team',  30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
@@ -85,7 +103,7 @@ def main():
                 mr.delta_ticket_count_ingame('50:00',          'enr',  30, TicketType.Cap) # finish radio cap - approximate based on timeline graphic
                 mr.add_ticket_bleed_ingame(  '50:00', '00:00', '82team', -1) # mid cap bleed
                 mr.delta_ticket_count_ingame('35:00',          '82team', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
-                mr.delta_ticket_count_ingame('21:00',          'enr', -20, TicketType.RadioLoss) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('21:00',          'enr', -20, TicketType.RadioLoss) # Radio loss - approximiate based on timeline graphic
             elif 'enroc_r1' in filename:
                 mr.delta_ticket_count_ingame('55:21',          'enr', 30, TicketType.Cap) # finish lower orchard cap
                 mr.delta_ticket_count_ingame('54:41',          'oc',  30, TicketType.Cap) # finish hemp cap
@@ -130,10 +148,10 @@ def infer_side_from_player_name(player_name):
         team = 'enr'
     elif 'heyitsjiwon' in pn: # EnR vs 82team - Round 1
         team = 'enr'
-    elif 'enr' in pn:
-        team = 'enr'
-    elif '[oc]' in pn:
+    elif '[oc]' in pn or '[oc-p]' in pn:
         team = 'oc'
+    elif 'enr' in pn: # this is important to go after the '[oc]' check because "[OC]   henrybenners" is a player name
+        team = 'enr'
     elif '[owl]' in pn:
         team = 'owls'
     elif 'o.w.l.s' in pn:
@@ -177,6 +195,15 @@ def infer_side_from_player_name(player_name):
         team = '82team'
     elif player_name in ['Drizzle sussy baka', 'EɴR |  .krsy']:
         team = 'enr'
+
+    # For OC vs 82team
+    elif player_name in ['Zagreb: I_I_IMaPoTpAx2009', 'AP ✵ Lt. waka_74 ✵', 'Asa1a', 'MwB. Phenix', '☆APatiy ☯︎Dissimilate☯',
+                         '[OCO] _YasperJKE阿爾伯特.HOTDOG', '[NKLK] Mane', '[N] Простые движения', 'TİKTOK Kojirō Hyūga',
+                         'WALES  Exxie', 'lox. Teros', 'FW Obawa ✿',
+                         ]:
+        team = '82team'
+    elif player_name in ['Indies Do2by', 'neo', 'Kat', '.Hash']:
+        team = 'oc'
     else:
         print(f'WARNING: could not infer team from player name: {player_name}')
         import pdb; pdb.set_trace()
@@ -213,6 +240,7 @@ class MatchRound:
         self.ingame_staging_end = ingame_staging_end
         self.ingame_match_duration = ingame_match_duration
         self.commander_player_names = dict()
+        self.player_to_side = set()
         self.team_side = dict()
         self.ticket_count = dict()
         for team_name in team_names:
@@ -274,12 +302,19 @@ class MatchRound:
             print('\tVIC LOSS\t', t_now, vic_team, -ticket_amount, vic_name)
     
 
+    def encounter_player_name(self, player_name):
+        side = infer_side_from_player_name(player_name)
+        if side is None:
+            side = 'unknown'
+        self.player_to_side.add((side, player_name))
+
     def log_player_die(self, tg_time, matched_content, tg_content):
         for line in matched_content:
             t_now = time.mktime(tg_time)
             ix_vic_name_start = line.find('Die(): Player:')+14
             ix_vic_name_end = line.find('KillingDamage=')
             vic_name = line[ix_vic_name_start:ix_vic_name_end].strip()
+            self.encounter_player_name(vic_name)
             vic_team = infer_side_from_player_name(vic_name)
             if vic_team is None:
                 print(f'WARNING: could not infer team from player name: {vic_name}')
@@ -332,7 +367,7 @@ class MatchRound:
             ax.axvline(x=self.to_ingame_time(self.time_end), color='red', linestyle='--', label='Match End')
         team_ticket_summary = dict()
         for team_name, ticket_count in self.ticket_count.items():
-            ticket_count.sort()
+            ticket_count.sort(key=lambda x: x[0])  # Sort by time
             tickets = self.ticket_count_start
             line = [(self.to_ingame_time(self.time_start), tickets)]
             ticket_type = dict()
@@ -353,6 +388,12 @@ class MatchRound:
         for team_name, ticket_type in team_ticket_summary.items():
             for t_type, tix in ticket_type.items():
                 print(f'- {team_name} {t_type.name}={tix}')
+        print('PLAYER SIDES:')
+        for pside in sorted(self.player_to_side):
+            try:
+                print(f'- {pside[0]} = {str(pside[1])}')
+            except UnicodeEncodeError:
+                print(f'- {pside[0]} = (UnicodeEncodeError, skipping)')
         ax.set_xlabel('In-Game Time (minutes)')
         ax.invert_xaxis()
         ax.set_xlim(self.to_ingame_time(self.time_start), 0)
