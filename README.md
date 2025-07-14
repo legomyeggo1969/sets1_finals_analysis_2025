@@ -108,18 +108,24 @@ These files capture the output produced by running the main script:
 - output/82_v_OWLS_-_Round_2___82team=169___owls=0.png
 - output/EnR_v_OC_-_Round_1___enr=37___oc=81.png
 - output/EnR_v_OC_-_Round_2___enr=48___oc=81.png
+- output/EnR_v_82_-_Round_1___enr=-2___82team=94.png
+- output/EnR_v_82_-_Round_2___enr=48___82team=0.png
 - output/script_output.txt
 
 ### The contents of the private data package includes the following files.
 These two files are the raw server logs from NA1 (82 vs OWLS) and EU2 (EnR vs OC)
 - data/SquadGame_82OWLS.log
 - data/SquadGame_ENROC.log
+- data/SquadGame-backup-2025.07.12-19.06.20.log
+- data/SquadGame-backup-2025.07.13-15.00.10.log
 
 These data files are excerpts from the raw server logs downsampled to *only* the relevant rounds
 - data/82owls_r1.log
 - data/82owls_r2.log
 - data/enroc_r1.log
 - data/enroc_r2.log
+- data/enr82_r1.log
+- data/enr82_r2.log
 
 
 ## Accounting for Known Limitations
@@ -152,4 +158,4 @@ When a teamkill occurs, a ticket is not lost when a player gives up. The tool do
 
 (6) The tool does not automatically detect which team a player is on.
 
-To mitigate this, we parse player names and assign them to a team based on their name. This logic is implmented in the the function "infer_side_from_player_name"
+To mitigate this, we parse player names and assign them to a team based on their name. This logic is implemented in the the function "infer_side_from_player_name"
