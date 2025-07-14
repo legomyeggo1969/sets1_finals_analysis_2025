@@ -16,9 +16,22 @@ We provide all data and all scripts used in this analysis and invite any indepen
 
 # Analysis
 ## Analysis: Proving correctness of the tool
-We apply the tool to the logs from the 82-OWLS match on July 13 and from an EnR-82 scrim on July 12. Please note that the tournament mod was updated the morning of July 12, and both of these examples used the exact same version of the mod that was used in the EnR-OC match. We compare the output of the tool to the in-game screens. Everything matches **exactly**. Therefore we have great confidence that the tool is counting tickets accurately.
+We apply the tool to the logs from five other rounds:
+- Two rounds from the 82-OWLS match on July 13
+- Two rounds from the EnR-82 scrim on July 12
+- One round from the 82-OC scrim on July 9
 
-### 82-OWLS Match Rounds 1 and 2
+Please note that the tournament mod was updated the morning of July 12. Therefore we can prove the correctness of the tool across versions of the mod. We compare the output of the tool to the in-game screens. We also apply the tool to one round of an OC-82 scrim from July 9, which notably was on a prior version of the mod. Everything matches **exactly**. Therefore we have great confidence that the tool is counting tickets accurately.
+
+### Tool Correctness 1 of 3: OC-82team Scrim played on July 9
+Only round 2 logs were made available. Note that this scrim was played on a prior version of the mod from what was used in the OC-EnR match. The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
+
+![Round 2](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/OC_v_82_-_Round_2___oc%3D198___82team%3D0.png)
+![Round 2 - Ingame Timeline](https://media.discordapp.net/attachments/1394089497305677875/1394332044166823987/20250710005106_1.jpg?ex=68766c68&is=68751ae8&hm=1d819990273a91bf844cc561a4bede906279c779cd1246dbf4d41e6a3d2e7e3b&=&format=webp&width=1654&height=930)
+![Round 2 - Ingame - Details](https://media.discordapp.net/attachments/1394089497305677875/1394332044561223772/20250710005107_1.jpg?ex=68766c68&is=68751ae8&hm=3bfa9038b9c3af5d6464a4b41a3af1c5033ee2313f032dc663e328be085c69e1&=&format=webp&width=1654&height=930)
+![Round 2 - Ingame - Scoreboard](https://media.discordapp.net/attachments/1394089497305677875/1394332042828845176/20250710005055_1.jpg?ex=68766c68&is=68751ae8&hm=bb1d2470aa1aa1ec0ff9cbe798e981b7461c51326c95474408923f4185c4ebfc&=&format=webp&width=1654&height=930)
+
+### Tool Correctness 2 of 3: 82-OWLS Match Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_1___82team%3D198___owls%3D0.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393968143218774116/image.png?ex=68751980&is=6873c800&hm=457fc369fe5956a934b8803921cdc5343087f44b61620d68d8f4b70b1d20630b&=&format=webp&quality=lossless&width=1669&height=906)
@@ -28,7 +41,7 @@ The tool produced the **exact same** ticket outcomes that were shown in-game by 
 ![Round 2 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393978306327609524/image.png?ex=687522f7&is=6873d177&hm=38d61fca9c0d28c0f558286a28f137c983723616bc19e04d22c35933b5d2cfa7&=&format=webp&quality=lossless&width=1669&height=934)
 ![Round 2 - Ingame Timeline](https://media.discordapp.net/attachments/1393966496966770748/1393978309133467669/image.png?ex=687522f7&is=6873d177&hm=3c11f57c49a380ded3da07c4a021cf66a67cc09085a843e2fc54f4679cc82048&=&format=webp&quality=lossless&width=1669&height=949)
 
-### EnR-82team Scrim played on July 12 Rounds 1 and 2
+### Tool Correctness 3 of 3: EnR-82team Scrim played on July 12 Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
 
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_82_-_Round_1___enr%3D-2___82team%3D94.png)
@@ -110,6 +123,7 @@ These files capture the output produced by running the main script:
 - output/EnR_v_OC_-_Round_2___enr=48___oc=81.png
 - output/EnR_v_82_-_Round_1___enr=-2___82team=94.png
 - output/EnR_v_82_-_Round_2___enr=48___82team=0.png
+- output/OC_v_82_-_Round_2___oc=198___82team=0.png
 - output/script_output.txt
 
 ### The contents of the private data package includes the following files.
