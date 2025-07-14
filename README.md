@@ -25,6 +25,20 @@ In-game scoreboard showed the match resulted in 0(EnR) to 73(OC).
 
 Therefore, there is a loss of between 37 and 49 tickets which cannot be accounted for.
 
+![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_1___enr%3D37___oc%3D81.png)
+![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394045908542292038/2025-07-13_20-02-51.mkv_snapshot_49.20.809.png?ex=687561ec&is=6874106c&hm=d480a27db1eabf06d4f1138fa9f8abadf258a6fa08c0867c2282a05a335fe05c&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1394045908143968417/2025-07-13_20-02-51.mkv_snapshot_49.22.479.png?ex=687561ec&is=6874106c&hm=551893b8ffec05e6f1aff3616f063ac69a5f2df13980f007640f7abf0b973fd3&=&format=webp&quality=lossless&width=1669&height=939)
+[!Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394045907745505563/2025-07-13_20-02-51.mkv_snapshot_49.26.029.png?ex=687561ec&is=6874106c&hm=197ad0b731e8e69052e56d028631fe0d9cc0247ab9088b92295e14a8fc6fc0ea&=&format=webp&quality=lossless&width=1669&height=939)
+Raw summary from the tool showing how logs break down ticket losses for both sides:
+```
+- enr Infantry=-253
+- enr Cap=60
+- enr Vehicle=-20
+- oc Vehicle=-15
+- oc Infantry=-149
+- oc Cap=30
+- oc Bleed=-35
+```
 
 ## Analysis: EnR-OC Round 2
 In-game scoreboard showed the match resulted in 0(EnR) to 77(OC)
@@ -35,28 +49,42 @@ In-game scoreboard showed the match resulted in 0(EnR) to 77(OC)
 It is possible that 30 tickets could be explained by the missing "flag flip ticket loss" (FFTL) which did not show up in the "Details" page. So if we conservatively assume the FFTL was accounted for under "Details - Infantry Losses" this still leaves 58 tickets unaccounted for.
 
 Therefore, there is a loss of between 48 and 58 tickets which cannot be accounted for.
-
+![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_2___enr%3D48___oc%3D81.png)
+![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394046734732230677/2025-07-13_20-59-02.mkv_snapshot_48.41.286.png?ex=687562b1&is=68741131&hm=6ccc04a4cb5851d0c8b2e2fa4214eecd5f2a85976d6de3bfeecd42f000104b1c&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1394046732085755984/2025-07-13_20-59-02.mkv_snapshot_49.00.018.png?ex=687562b1&is=68741131&hm=acdb377feda7c67a8a1a16075682d1b8b0067c8a28827ea403737365df0c6e5d&=&format=webp&quality=lossless&width=1669&height=939)
+[!Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394046731519262851/2025-07-13_20-59-02.mkv_snapshot_49.03.352.png?ex=687562b0&is=68741130&hm=2736a908478692cfbf9d3fed934f70644d947b631c71c07effb3ea84b616be1e&=&format=webp&quality=lossless&width=1669&height=939)
+Raw summary from the tool showing how logs break down ticket losses for both sides:
+```
+- enr Infantry=-204
+- enr Cap=30
+- enr Vehicle=-25
+- enr Bleed=-3
+- oc Vehicle=-25
+- oc Infantry=-202
+- oc Cap=90
+- oc Bleed=-32
+```
 
 ## Content Description
-The contents of this data package includes the follow files:
+# The contents of this public data package includes the follow files:
 
-    This file is the script which is used to process the log, summarize results, and visualize results
+This file is the script which is used to process the log, summarize results, and visualize results
         (written in python, requires 'matplotlib' as a dependency for visualization)
     - main.py
 
-    These files capture the output produced by running the main script:
+These files capture the output produced by running the main script:
     - output/82_v_OWLS_-_Round_1___82team=198___owls=0.png
     - output/82_v_OWLS_-_Round_2___82team=169___owls=0.png
     - output/EnR_v_OC_-_Round_1___enr=37___oc=81.png
     - output/EnR_v_OC_-_Round_2___enr=48___oc=81.png
     - output/script_output.txt
 
-The contents of the private data package includes the following files.
-    These two files are the raw server logs from NA1 (82 vs OWLS) and EU2 (EnR vs OC)
+# The contents of the private data package includes the following files.
+These two files are the raw server logs from NA1 (82 vs OWLS) and EU2 (EnR vs OC)
     - data/SquadGame_82OWLS.log
     - data/SquadGame_ENROC.log
 
-    These data files are excerpts from the raw server logs downsampled to *only* the relevant rounds
+These data files are excerpts from the raw server logs downsampled to *only* the relevant rounds
     - data/82owls_r1.log
     - data/82owls_r2.log
     - data/enroc_r1.log
