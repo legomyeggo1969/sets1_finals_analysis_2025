@@ -116,6 +116,8 @@ These files capture the output produced by running the main script:
 These two files are the raw server logs from NA1 (82 vs OWLS) and EU2 (EnR vs OC)
 - data/SquadGame_82OWLS.log
 - data/SquadGame_ENROC.log
+
+These two files are the raw server logs from the EnR EU Scrim Server (EnR vs 82 scrim)
 - data/SquadGame-backup-2025.07.12-19.06.20.log
 - data/SquadGame-backup-2025.07.13-15.00.10.log
 
