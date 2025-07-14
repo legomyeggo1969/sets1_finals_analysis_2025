@@ -8,7 +8,13 @@ We provide all data and all scripts used in this analysis and invite any indepen
 
 ## Analysis: 82-OWLS Rounds 1 and 2
 The tool produced the *exact same* ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
+![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_1___82team%3D198___owls%3D0.png)
+![Round 1 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393968143218774116/image.png?ex=68751980&is=6873c800&hm=457fc369fe5956a934b8803921cdc5343087f44b61620d68d8f4b70b1d20630b&=&format=webp&quality=lossless&width=1669&height=906)
+![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1393966496966770748/1393968145827500193/image.png?ex=68751980&is=6873c800&hm=b1506b6bd03cde2495e6b9d325bebdff68c00418049dc58a6bdf6043fe7a4ba0&=&format=webp&quality=lossless&width=1669&height=952)
 
+![Round 2](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_2___82team%3D169___owls%3D0.png)
+![Round 2 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393978306327609524/image.png?ex=687522f7&is=6873d177&hm=38d61fca9c0d28c0f558286a28f137c983723616bc19e04d22c35933b5d2cfa7&=&format=webp&quality=lossless&width=1669&height=934)
+![Round 2 - Ingame Timeline](https://media.discordapp.net/attachments/1393966496966770748/1393978309133467669/image.png?ex=687522f7&is=6873d177&hm=3c11f57c49a380ded3da07c4a021cf66a67cc09085a843e2fc54f4679cc82048&=&format=webp&quality=lossless&width=1669&height=949)
 
 ## Analysis: EnR-OC Round 1
 In-game scoreboard showed the match resulted in 0(EnR) to 73(OC).
