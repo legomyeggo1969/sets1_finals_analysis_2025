@@ -28,7 +28,7 @@ Therefore, there is a loss of between 37 and 49 tickets which cannot be accounte
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_1___enr%3D37___oc%3D81.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394045908542292038/2025-07-13_20-02-51.mkv_snapshot_49.20.809.png?ex=687561ec&is=6874106c&hm=d480a27db1eabf06d4f1138fa9f8abadf258a6fa08c0867c2282a05a335fe05c&=&format=webp&quality=lossless&width=1669&height=939)
 ![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1394045908143968417/2025-07-13_20-02-51.mkv_snapshot_49.22.479.png?ex=687561ec&is=6874106c&hm=551893b8ffec05e6f1aff3616f063ac69a5f2df13980f007640f7abf0b973fd3&=&format=webp&quality=lossless&width=1669&height=939)
-[!Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394045907745505563/2025-07-13_20-02-51.mkv_snapshot_49.26.029.png?ex=687561ec&is=6874106c&hm=197ad0b731e8e69052e56d028631fe0d9cc0247ab9088b92295e14a8fc6fc0ea&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394045907745505563/2025-07-13_20-02-51.mkv_snapshot_49.26.029.png?ex=687561ec&is=6874106c&hm=197ad0b731e8e69052e56d028631fe0d9cc0247ab9088b92295e14a8fc6fc0ea&=&format=webp&quality=lossless&width=1669&height=939)
 
 Raw summary from the tool showing how logs break down ticket losses for both sides:
 ```
@@ -53,7 +53,7 @@ Therefore, there is a loss of between 48 and 58 tickets which cannot be accounte
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_2___enr%3D48___oc%3D81.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394046734732230677/2025-07-13_20-59-02.mkv_snapshot_48.41.286.png?ex=687562b1&is=68741131&hm=6ccc04a4cb5851d0c8b2e2fa4214eecd5f2a85976d6de3bfeecd42f000104b1c&=&format=webp&quality=lossless&width=1669&height=939)
 ![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1394046732085755984/2025-07-13_20-59-02.mkv_snapshot_49.00.018.png?ex=687562b1&is=68741131&hm=acdb377feda7c67a8a1a16075682d1b8b0067c8a28827ea403737365df0c6e5d&=&format=webp&quality=lossless&width=1669&height=939)
-[!Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394046731519262851/2025-07-13_20-59-02.mkv_snapshot_49.03.352.png?ex=687562b0&is=68741130&hm=2736a908478692cfbf9d3fed934f70644d947b631c71c07effb3ea84b616be1e&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1394046731519262851/2025-07-13_20-59-02.mkv_snapshot_49.03.352.png?ex=687562b0&is=68741130&hm=2736a908478692cfbf9d3fed934f70644d947b631c71c07effb3ea84b616be1e&=&format=webp&quality=lossless&width=1669&height=939)
 
 Raw summary from the tool showing how logs break down ticket losses for both sides:
 ```
