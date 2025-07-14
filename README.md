@@ -10,7 +10,8 @@ What caused these unexplained ticket losses? We're not sure. But we know it happ
 [![Examples of unexplained ticket losses](https://img.youtube.com/vi/OWYA8Cv1N7M/0.jpg)](https://www.youtube.com/watch?v=OWYA8Cv1N7M)
 
 # Analysis
-## Analysis: 82-OWLS Rounds 1 and 2
+## Analysis: Proving correctness of the tool
+### 82-OWLS Match Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_1___82team%3D198___owls%3D0.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393968143218774116/image.png?ex=68751980&is=6873c800&hm=457fc369fe5956a934b8803921cdc5343087f44b61620d68d8f4b70b1d20630b&=&format=webp&quality=lossless&width=1669&height=906)
@@ -20,7 +21,21 @@ The tool produced the **exact same** ticket outcomes that were shown in-game by 
 ![Round 2 - Ingame](https://media.discordapp.net/attachments/1393966496966770748/1393978306327609524/image.png?ex=687522f7&is=6873d177&hm=38d61fca9c0d28c0f558286a28f137c983723616bc19e04d22c35933b5d2cfa7&=&format=webp&quality=lossless&width=1669&height=934)
 ![Round 2 - Ingame Timeline](https://media.discordapp.net/attachments/1393966496966770748/1393978309133467669/image.png?ex=687522f7&is=6873d177&hm=3c11f57c49a380ded3da07c4a021cf66a67cc09085a843e2fc54f4679cc82048&=&format=webp&quality=lossless&width=1669&height=949)
 
-## Analysis: EnR-OC Round 1
+### EnR-82team Scrim played on July 12 Rounds 1 and 2
+The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
+
+![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_82_-_Round_1___enr%3D-2___82team%3D94.png)
+![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1393684532171116574/Screenshot_1010.png?ex=68760b9d&is=6874ba1d&hm=51f35d51574f268ee60bc3ef9810b4b5cd9bb1ccdacde28d7ecfe013abf31d0d&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1393684531659280465/Screenshot_1011.png?ex=68760b9d&is=6874ba1d&hm=1d85e2235975f6ced65a672e77611d04e31cbbdd6fca904f727e31944e952658&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1393684534851145788/Screenshot_1004.png?ex=68760b9e&is=6874ba1e&hm=096d288e215fb6c4524cc87f04763a51339a08d3ad1333fbc55929df2279caed&=&format=webp&quality=lossless&width=1669&height=939)
+
+![Round 2](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_82_-_Round_2___enr%3D48___82team%3D0.png)
+![Round 2 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1393684675553263829/Screenshot_1015.png?ex=68760bc0&is=6874ba40&hm=e87e7e10709fc99d56c96c2ca10e4a1ea977cbe314e501031cc846c22f46b297&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 2 - Ingame Details](https://media.discordapp.net/attachments/1264242708239618180/1393684675045888092/Screenshot_1016.png?ex=68760bbf&is=6874ba3f&hm=119983b2b1375b00316ad5834a2fa38b46d7052d00353fcfa528be5eebfb9bbf&=&format=webp&quality=lossless&width=1669&height=939)
+![Round 2 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1393684677864329256/Screenshot_1005.png?ex=68760bc0&is=6874ba40&hm=fa43a2ba1e0cda3cd31ea16c33e1bcac2cd400049e1b9ed05504fa208d58e401&=&format=webp&quality=lossless&width=1669&height=939)
+
+
+## Analysis: EnR-OC Match Round 1
 In-game scoreboard showed the match resulted in 0(EnR) to 73(OC).
 
 (1) Based on server logs, the match should have resulted in approximately 37-81. The shape of the graph produced by the tool matches the ingame "Tickets over Time" except for the missing tickets.
@@ -46,7 +61,7 @@ Raw summary from the tool showing how logs break down ticket losses for both sid
 - oc Bleed=-35
 ```
 
-## Analysis: EnR-OC Round 2
+## Analysis: EnR-OC Match Round 2
 In-game scoreboard showed the match resulted in 0(EnR) to 77(OC)
 
 (1) Based on server logs, the match should have resulted in approximately 48-81. The shape of the graph produced by the tool matches the ingame "Tickets over Time" except for the missing tickets.
