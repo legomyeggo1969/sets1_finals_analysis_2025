@@ -1,11 +1,11 @@
-## SUMMARY
+# SUMMARY
 This analysis definitely shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are **between 85 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
 
 Low tickets situations cause teams to make very different decisions and play very differently. There is no explanation for why EnR tickets are lower than can be substantiated with any data. If EnR had the tickets which cannot be accounted for, then EnR would have made different in-game decisions.
 
 We provide all data and all scripts used in this analysis and invite any independent party to inspect and verify our work. Because these server logs include player identifying information, we will keep the raw data private to be shared only with tournament-designated personnel, and are available on request. The full results are being publically published.
 
-
+# Analysis
 ## Analysis: 82-OWLS Rounds 1 and 2
 The tool produced the *exact same* ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_1___82team%3D198___owls%3D0.png)
@@ -70,8 +70,9 @@ Raw summary from the tool showing how logs break down ticket losses for both sid
 - oc Bleed=-32
 ```
 
+# Methodology and Content
 ## Content Description
-# The contents of this public data package includes the follow files:
+### The contents of this public data package includes the follow files:
 
 This file is the script which is used to process the log, summarize results, and visualize results
 - main.py (written in python, requires 'matplotlib' as a dependency for visualization)
@@ -83,7 +84,7 @@ These files capture the output produced by running the main script:
 - output/EnR_v_OC_-_Round_2___enr=48___oc=81.png
 - output/script_output.txt
 
-# The contents of the private data package includes the following files.
+### The contents of the private data package includes the following files.
 These two files are the raw server logs from NA1 (82 vs OWLS) and EU2 (EnR vs OC)
 - data/SquadGame_82OWLS.log
 - data/SquadGame_ENROC.log
