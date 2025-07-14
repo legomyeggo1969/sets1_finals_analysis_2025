@@ -3,14 +3,20 @@ This analysis definitively shows there is a ticket discrepancy in the EnR -vs- O
 
 Low tickets situations cause teams to make very different decisions and play very differently. There is no explanation for why EnR tickets are lower than can be substantiated with any data. If EnR had the tickets which cannot be accounted for, then EnR would have made different in-game decisions.
 
-We provide all data and all scripts used in this analysis and invite any independent party to inspect and verify our work. Because these server logs include player identifying information, we will keep the raw data private to be shared only with tournament-designated personnel, and are available on request. The full results are being publically published.
 
-What caused these unexplained ticket losses? We're not sure. But we know it happened... and here is a video from the match showing instances of it happening:
+### What caused these unexplained ticket losses?
+We're not sure. But we know it happened... and here is a video from the match showing instances of it happening:
 
 [![Examples of unexplained ticket losses](https://img.youtube.com/vi/OWYA8Cv1N7M/0.jpg)](https://www.youtube.com/watch?v=OWYA8Cv1N7M)
 
+### Independent Verification
+We provide all data and all scripts used in this analysis and invite any independent party to inspect and verify our work. Because these server logs include player identifying information, we will keep the raw data private to be shared only with tournament-designated personnel, and are available on request. The full results are being publically published.
+
+
 # Analysis
 ## Analysis: Proving correctness of the tool
+We apply the tool to the logs from the 82-OWLS match on July 13 and from an EnR-82 scrim on July 12. We compare the output of the tool to the in-game screens. Everything matches **exactly**. Therefore we have great confidence that the tool is counting tickets accurately.
+
 ### 82-OWLS Match Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/82_v_OWLS_-_Round_1___82team%3D198___owls%3D0.png)
