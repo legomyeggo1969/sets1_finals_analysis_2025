@@ -5,6 +5,10 @@ Low tickets situations cause teams to make very different decisions and play ver
 
 We provide all data and all scripts used in this analysis and invite any independent party to inspect and verify our work. Because these server logs include player identifying information, we will keep the raw data private to be shared only with tournament-designated personnel, and are available on request. The full results are being publically published.
 
+What caused these unexplained ticket losses? We're not sure. But we know it happened... and here is a video from the match showing instances of it happening:
+
+[![Examples of unexplained ticket losses](https://img.youtube.com/vi/OWYA8Cv1N7M/0.jpg)](https://www.youtube.com/watch?v=OWYA8Cv1N7M)
+
 # Analysis
 ## Analysis: 82-OWLS Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
