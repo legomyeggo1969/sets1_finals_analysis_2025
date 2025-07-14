@@ -97,7 +97,7 @@ These data files are excerpts from the raw server logs downsampled to *only* the
 
 
 ## Accounting for Known Limitations
-All manual adjustments are captured in the main script in the "main()" function above line ~100-ish.
+All manual adjustments are captured in the main script in the "main()" function unless otherwise noted.
 
 (1) Sometimes vehicle losses are not automatically captured by this tool.
 
