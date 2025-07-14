@@ -16,7 +16,7 @@ We provide all data and all scripts used in this analysis and invite any indepen
 
 # Analysis
 ## Analysis: Proving correctness of the tool
-We apply the tool to the logs from the 82-OWLS match on July 13 and from an EnR-82 scrim on July 12. We compare the output of the tool to the in-game screens. Everything matches **exactly**. Therefore we have great confidence that the tool is counting tickets accurately.
+We apply the tool to the logs from the 82-OWLS match on July 13 and from an EnR-82 scrim on July 12. Please note that the tournament mod was updated the morning of July 12, and both of these examples used the exact same version of the mod that was used in the EnR-OC match. We compare the output of the tool to the in-game screens. Everything matches **exactly**. Therefore we have great confidence that the tool is counting tickets accurately.
 
 ### 82-OWLS Match Rounds 1 and 2
 The tool produced the **exact same** ticket outcomes that were shown in-game by parsing the logs and accounting for the known limitations in the tool (described in the section below "Accounting for Known Limitations"). Therefore we have great confidence that the tool is counting tickets accurately.
