@@ -5,9 +5,10 @@ Low tickets situations cause teams to make very different decisions and play ver
 
 
 ### What caused these unexplained ticket losses?
-We're not sure. But we know it happened... and here is a video from the match showing instances of it happening:
+We're not sure. But we know it happened... and here is a video from the match showing instances of it happening: [https://www.youtube.com/watch?v=OWYA8Cv1N7M](https://www.youtube.com/watch?v=OWYA8Cv1N7M)
 
 [![Examples of unexplained ticket losses](https://img.youtube.com/vi/OWYA8Cv1N7M/0.jpg)](https://www.youtube.com/watch?v=OWYA8Cv1N7M)
+
 
 ### Independent Verification
 We provide all data and all scripts used in this analysis and invite any independent party to inspect and verify our work. Because these server logs include player identifying information, we will keep the raw data private to be shared only with tournament-designated personnel, and are available on request. The full results are being publically published.
