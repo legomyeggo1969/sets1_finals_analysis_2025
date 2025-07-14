@@ -12,6 +12,8 @@ class TicketType(enum.Enum):
 def main():
 
     for label, filename, ingame_match_duration in [
+            ('EnR v 82 - Round 1', 'data/enr82_r1.log', 41*60 + 50),
+            ('EnR v 82 - Round 2', 'data/enr82_r2.log', 50*60 + 49),
             ('EnR v OC - Round 1', 'data/enroc_r1.log', 48*60 + 4),
             ('EnR v OC - Round 2', 'data/enroc_r2.log', 50*60 + 45),
             ('82 v OWLS - Round 1', 'data/82owls_r1.log', 35*60 + 7),
@@ -20,6 +22,8 @@ def main():
         for excursion in [1]:
             if 'enroc' in filename:
                 team_names = ['enr', 'oc']
+            elif 'enr82' in filename:
+                team_names = ['enr', '82team']
             else:
                 team_names = ['82team', 'owls']
             mr = MatchRound(
@@ -42,6 +46,12 @@ def main():
             elif '82owls_r2' in filename:
                 mr.set_team_side('82team', 1)
                 mr.set_team_side('owls', 2)
+            elif 'enr82_r1' in filename:
+                mr.set_team_side('enr', 1)
+                mr.set_team_side('82team', 2)
+            elif 'enr82_r2' in filename:
+                mr.set_team_side('82team', 1)
+                mr.set_team_side('enr', 2)
             elif 'enroc_r1' in filename:
                 mr.set_team_side('oc', 1)
                 mr.set_team_side('enr', 2)
@@ -61,7 +71,22 @@ def main():
             print('*'*80)
             slr.search_tick_group(filename)
 
-            if 'enroc_r1' in filename:
+            if 'enr82_r1' in filename:
+                mr.delta_ticket_count_ingame('55:00',          'enr', 30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('54:00',          '82team',  30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('51:30',          '82team',  30, TicketType.Cap) # finish radio cap - approximate based on timeline graphic
+                mr.add_ticket_bleed_ingame(  '51:30', '00:00', 'enr', -1) # mid cap bleed
+                mr.delta_ticket_count_ingame('44:00',          'enr', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('30:00',          'enr', -20, TicketType.RadioLoss) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('22:10',          'enr', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
+            elif 'enr82_r2' in filename:
+                mr.delta_ticket_count_ingame('54:00',          '82team',  30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('53:30',          'enr', 30, TicketType.Cap) # finish first cap - approximate based on timeline graphic
+                mr.delta_ticket_count_ingame('50:00',          'enr',  30, TicketType.Cap) # finish radio cap - approximate based on timeline graphic
+                mr.add_ticket_bleed_ingame(  '50:00', '00:00', '82team', -1) # mid cap bleed
+                mr.delta_ticket_count_ingame('35:00',          '82team', -10, TicketType.Vehicle) # LAV loss - approximiate based on timeline graphic
+                mr.delta_ticket_count_ingame('21:00',          'enr', -20, TicketType.RadioLoss) # LAV loss - approximiate based on timeline graphic
+            elif 'enroc_r1' in filename:
                 mr.delta_ticket_count_ingame('55:21',          'enr', 30, TicketType.Cap) # finish lower orchard cap
                 mr.delta_ticket_count_ingame('54:41',          'oc',  30, TicketType.Cap) # finish hemp cap
                 mr.delta_ticket_count_ingame('52:15',          'enr', 30, TicketType.Cap) # finish radio cap
@@ -84,7 +109,7 @@ def main():
                 mr.add_ticket_bleed_ingame(  '51:08', '00:00', 'owls', -1) # mid cap bleed
                 mr.delta_ticket_count_ingame('50:51',          'owls',  30, TicketType.Cap) # finish hemp cap
                 mr.delta_ticket_count_ingame('42:01',          'owls', -10, TicketType.Vehicle) # based on stream (@1:05:40)
-                mr.delta_ticket_count_ingame('36:49',          'owls', -20, TicketType.RadioLoss) # based on stream (@1:10:53)
+                mr.delta_ticket_count_ingame('36:50',          'owls', -20, TicketType.RadioLoss) # based on stream (@1:10:53)
             elif '82owls_r2' in filename:
                 mr.delta_ticket_count_ingame('53:28',          'owls',  30, TicketType.Cap) # finish lower orchard cap (based on stream)
                 mr.delta_ticket_count_ingame('54:40',          '82team', 30, TicketType.Cap) # finish hemp cap (based on stream @1:40:42)
@@ -101,6 +126,10 @@ def infer_side_from_player_name(player_name):
     team = None
     if pn == 'nullptr':
         pass
+    elif pn == '[oc] brain.': # EnR vs 82team - Round 1
+        team = 'enr'
+    elif 'heyitsjiwon' in pn: # EnR vs 82team - Round 1
+        team = 'enr'
     elif 'enr' in pn:
         team = 'enr'
     elif '[oc]' in pn:
@@ -129,6 +158,25 @@ def infer_side_from_player_name(player_name):
         team = '82team'
     elif pn == 'sso  ren':
         team = '82team'
+    elif 'hihihihihihi' in pn: # EnR vs 82team - Round 1
+        team = '82team'
+    elif pn == 'mygf ❥ mdma': # EnR vs 82team - Round 1
+        team = '82team'
+    elif ' ipon' in pn: # EnR vs 82team - Round 1
+        team = '82team'
+    elif 'xuenz' in pn: # EnR vs 82team - Round 1
+        team = 'enr'
+    elif 'hesiahh' in pn: # EnR vs 82team - Round 1
+        team = 'enr'
+    elif 'marcinek' in pn: # EnR vs 82team - Round 1
+        team = 'enr'
+    elif pn == 'lomayo': # EnR vs 82team - Round 1
+        team = '82team'
+    elif player_name in ['$$$_Рыбец333_$$$', '｢ИШАКИ｣ ТугаяЛялечка<3', 'Сонечка _YasperJKE阿爾伯特.HOTDOG',
+                         'Nikiton cheat engine', 'MRnoob  invis', 'MRnoob invis', '+tilt AngelDust', "'C4' Fear", 'XOXO.Arenal']:
+        team = '82team'
+    elif player_name in ['Drizzle sussy baka', 'EɴR |  .krsy']:
+        team = 'enr'
     else:
         print(f'WARNING: could not infer team from player name: {player_name}')
         import pdb; pdb.set_trace()
