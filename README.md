@@ -1,5 +1,5 @@
 # SUMMARY
-This analysis definitely shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are **between 85 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
+This analysis definitively shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are **between 85 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
 
 Low tickets situations cause teams to make very different decisions and play very differently. There is no explanation for why EnR tickets are lower than can be substantiated with any data. If EnR had the tickets which cannot be accounted for, then EnR would have made different in-game decisions.
 
