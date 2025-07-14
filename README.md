@@ -1,5 +1,5 @@
 ## SUMMARY
-This analysis definitely shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are between 85 - 107 tickets lost from EnR which are **unaccounted-for** based on available data.
+This analysis definitely shows there is a ticket discrepancy in the EnR -vs- OC match which negatively affected EnR. Meanwhile the 82 -vs- OWLS match was unaffected. We show this by parsing the logs and account for every ticket loss. We show that the logs **exactly** account for all ticket losses in the 82-vs-OWLS match, and there are **between 85 - 107 tickets lost from EnR which are unaccounted-for** based on available data.
 
 Low tickets situations cause teams to make very different decisions and play very differently. There is no explanation for why EnR tickets are lower than can be substantiated with any data. If EnR had the tickets which cannot be accounted for, then EnR would have made different in-game decisions.
 
@@ -23,7 +23,7 @@ In-game scoreboard showed the match resulted in 0(EnR) to 73(OC).
 
 (2) The "Details" page shows 290 infantry tickets lost, however the "Scoreboard" page show 239 infantry deaths, when you account for commander deaths this leaves 49 unexplained tickets in the "Details - Infantry Losses" metric.
 
-Therefore, there is a loss of between 37 and 49 tickets which cannot be accounted for.
+**Therefore, there is a loss of between 37 and 49 tickets which cannot be accounted for.**
 
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_1___enr%3D37___oc%3D81.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394045908542292038/2025-07-13_20-02-51.mkv_snapshot_49.20.809.png?ex=687561ec&is=6874106c&hm=d480a27db1eabf06d4f1138fa9f8abadf258a6fa08c0867c2282a05a335fe05c&=&format=webp&quality=lossless&width=1669&height=939)
@@ -46,10 +46,11 @@ In-game scoreboard showed the match resulted in 0(EnR) to 77(OC)
 
 (1) Based on server logs, the match should have resulted in approximately 48-81. The shape of the graph produced by the tool matches the ingame "Tickets over Time" except for the missing tickets.
 
-(2) The "Details" page shows 280 infantry tickets lost, however the "Scoreboard" page show 192 infantry deaths. There were no commander deaths. This leaves 88 unexplained tickets in the "Details - Infantry Losses" metric.
+(2) The "Details" page shows 280 infantry tickets lost, however the "Scoreboard" page show 192 infantry deaths, and the logs show 204. There were no commander deaths. This leaves 88 unexplained tickets in the "Details - Infantry Losses" metric.
 It is possible that 30 tickets could be explained by the missing "flag flip ticket loss" (FFTL) which did not show up in the "Details" page. So if we conservatively assume the FFTL was accounted for under "Details - Infantry Losses" this still leaves 58 tickets unaccounted for.
 
-Therefore, there is a loss of between 48 and 58 tickets which cannot be accounted for.
+**Therefore, there is a loss of between 48 and 58 tickets which cannot be accounted for.**
+
 ![Round 1](https://raw.githubusercontent.com/legomyeggo1969/sets1_finals_analysis_2025/refs/heads/main/output/EnR_v_OC_-_Round_2___enr%3D48___oc%3D81.png)
 ![Round 1 - Ingame](https://media.discordapp.net/attachments/1264242708239618180/1394046734732230677/2025-07-13_20-59-02.mkv_snapshot_48.41.286.png?ex=687562b1&is=68741131&hm=6ccc04a4cb5851d0c8b2e2fa4214eecd5f2a85976d6de3bfeecd42f000104b1c&=&format=webp&quality=lossless&width=1669&height=939)
 ![Round 1 - Ingame Timeline](https://media.discordapp.net/attachments/1264242708239618180/1394046732085755984/2025-07-13_20-59-02.mkv_snapshot_49.00.018.png?ex=687562b1&is=68741131&hm=acdb377feda7c67a8a1a16075682d1b8b0067c8a28827ea403737365df0c6e5d&=&format=webp&quality=lossless&width=1669&height=939)
